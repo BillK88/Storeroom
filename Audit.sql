@@ -1,3 +1,4 @@
+--Added a comment
 select *
 from azteca.MatAudit AUD inner join azteca.TransHistory TRN on AUD.TransactionID = TRN.TransactionID
 left outer join (select StoreRM, Count(MaterialSID) CntItems, Sum(StockOnHand) QOH from azteca.StoreRMStock group by StoreRM) SRS on AUD.StoreRM = SRS.StoreRM
